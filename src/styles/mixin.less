@@ -1,0 +1,61 @@
+@import '~@/styles/variable.less';
+
+
+// flex layout
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center
+}
+
+.flex-center {
+  .flex;
+  .align-center;
+  justify-content: center;
+}
+
+.flex-align-center {
+  .flex;
+  .align-center;
+}
+
+.flex-btw {
+  .flex;
+  justify-content: space-between;
+}
+
+// 文字溢出隐藏
+.multiple-line-ellipsis(@line: 2) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.position-fixed(@top: 0, @right: 0, @bottom: 0, @left: 0) {
+  position: fixed;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.square(@side) {
+  width: @side;
+  height: @side;
+}
+
+.square-circle(@side, @radius: 50%) {
+  width: @side;
+	height: @side;
+	border-radius: @radius;
+}
+
+
+
+
+

@@ -1,0 +1,68 @@
+@import './variable.less';
+@import './mixin.less';
+
+text,
+view,
+textarea {
+  box-sizing: border-box;
+}
+
+button {
+  border-radius: 4px;
+
+  &::after {
+    border: none;
+    border-radius: 0;
+  }
+
+  &[size='default'] {
+    width: 100%;
+    height: 50px;
+    font-size: @font-size-lg;
+    background-color: @button-bg-default;
+    font-weight: 600;
+  }
+
+  &[size='mini'] {
+    min-width: 76px;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: @font-size-normal;
+  }
+
+  &[size='mini'][type='primary'] {
+    background-color: @color-camel;
+    color: @color-white;
+  }
+
+  &[size='mini'][type='default'] {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    background-color: @color-white;
+    color: @color-dark-gray;
+  }
+
+  &[size='default'][type='primary'] {
+    color: #f0d693;
+    background-image: linear-gradient(#222, #373737);
+  }
+
+  &[size='default'][type='default'] {
+    color: @color-camel;
+    background-color: transparent;
+    border: @color-camel solid 1px;
+  }
+
+  &[type='warn'] {
+    color: #fe525b;
+  }
+
+  &[disabled] {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &[disabled][type='primary'] {
+    color: #0000004c;
+    background: #e5e5e5;
+  }
+}
